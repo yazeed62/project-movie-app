@@ -40,10 +40,12 @@ function displayMovies(movies) {
         <img src="${movie.Poster}">
         <h3>${movie.Title}</h3>
         <p>${movie.Year}</p>
-        
+        <button class="like-button">Like</button>
       `;
     results.appendChild(movieCard);
   });
+
+  
   const likeButtons = document.querySelectorAll(".like-button");
 
   likeButtons.forEach((button) => {
@@ -62,4 +64,4 @@ function displayError() {
   results.innerHTML = "<p>No results found.</p>";
 }
 
-//const moviecontainer = document.querySelector("#movie-container");
+
