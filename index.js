@@ -40,8 +40,20 @@ function displayMovies(movies) {
         <img src="${movie.Poster}">
         <h3>${movie.Title}</h3>
         <p>${movie.Year}</p>
+        
       `;
     results.appendChild(movieCard);
+  });
+  const likeButtons = document.querySelectorAll(".like-button");
+
+  likeButtons.forEach((button) => {
+    button.addEventListener("click", (event) => {
+      const card = event.target.closest(".movie-card");
+      const likeCount = card.querySelector(".like-count");
+      let count = parseInt(likeCount.textContent);
+      count++;
+      likeCount.textContent = count;
+    });
   });
 }
 
