@@ -14,6 +14,7 @@ body {
 
 header {
   background-color: rgb(159, 159, 28);
+  text-align: center;
 }
 
 .search-container {
@@ -24,15 +25,21 @@ header {
 .search-container input[type="text"] {
   padding: 10px;
   width: 50%;
-  font-size: 18px;
+  font-size: 20px;
+  text-align: center;
+  
 }
 
 .search-container select {
   padding: 10px;
   font-size: 18px;
+  text-align: center;
 }
 
 .result {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin: 20px;
 }
 
@@ -63,16 +70,20 @@ header {
 }
 
 .grid-container {
-  display: flex;
-  align-items: center;
-  flex-flow: nowrap;
-  height: 200px;
+  padding: 0 20px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 1em;
+}
+
+@media (max-width: 576px) {
+  main {
+    grid-template-columns: auto;
+  }
 }
 
 .grid-container > div {
-  background: #ddd;
-  line-height: 50px;
-  height: 50px;
-  margin: 5px;
+  
   text-align: center;
 }
