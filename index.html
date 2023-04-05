@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ya3eed Movie Hub</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Ya3eed Movie Hub</h1>
+    </header>
+
+    <div id="search-container"></div>
+    <form id="search-form">
+      <label for="search-input">Search by Genre or Director:</label>
+      <input
+        type="text"
+        id="search-input"
+        name="search-input"
+        placeholder="Enter a genre or director..."
+      />
+      <button type="submit">Search</button>
+    </form>
+
+    <div id="results" class="grid-container"></div>
+    <footer>
+      <p>&copy; 2023 Ya3eed Movie Hub</p>
+    </footer>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
