@@ -4,6 +4,13 @@
 
 body {
   margin: 0;
+  background-image: url(px2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+   height: 100vh;
+  width: 100vw;
+  color: aliceblue;
 }
 
 body {
@@ -13,8 +20,13 @@ body {
 }
 
 header {
-  background-color: rgb(159, 159, 28);
+  background-color: rgb(32, 32, 26);
   text-align: center;
+  font-size: 28px;
+  font-family: 'Lobster', cursive;
+  padding: 10px;
+  color: #fff;
+  text-transform: uppercase;
 }
 
 .search-container {
@@ -27,7 +39,6 @@ header {
   width: 50%;
   font-size: 20px;
   text-align: center;
-  
 }
 
 .search-container select {
@@ -62,11 +73,13 @@ header {
 .movie h3 {
   margin-top: 10px;
   font-size: 16px;
+  color:azure;
 }
 
 .movie p {
   margin-top: 5px;
   font-size: 14px;
+  
 }
 
 .grid-container {
@@ -84,6 +97,5 @@ header {
 }
 
 .grid-container > div {
-  
   text-align: center;
 }

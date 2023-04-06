@@ -41,7 +41,12 @@ function displayMovies(movies) {
         <h3>${movie.Title}</h3>
         <p>${movie.Year}</p>
         <button class="like-button">like</button>
-        <p class="like-count">0</p>          
+        <p class="like-count">0</p>
+        <div class="comment-section">
+          <input type="text" class="comment-input" placeholder="Leave a comment">
+          <button class="comment-button">Comment</button>
+          <ul class="comment-list"></ul>
+        </div>          
       `;
     const likeButton = movieCard.querySelector(".like-button");
     const likeCount = movieCard.querySelector(".like-count");
@@ -50,6 +55,20 @@ function displayMovies(movies) {
     likeButton.addEventListener("click", function () {
       count++;
       likeCount.textContent = count;
+    });
+
+    const commentInput = movieCard.querySelector(".comment-input");
+    const commentButton = movieCard.querySelector(".comment-button");
+    const commentList = movieCard.querySelector(".comment-list");
+
+    commentButton.addEventListener("click", function () {
+      const comment = commentInput.value;
+      if (comment !== "") {
+        const commentItem = document.createElement("li");
+        commentItem.textContent = comment;
+        commentList.appendChild(commentItem);
+        commentInput.value = "";
+      }
     });
 
     results.appendChild(movieCard);
