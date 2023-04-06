@@ -8,7 +8,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: repeat;
-   height: 100vh;
+  height: 100vh;
   width: 100vw;
   color: aliceblue;
 }
@@ -23,28 +23,35 @@ header {
   background-color: rgb(32, 32, 26);
   text-align: center;
   font-size: 28px;
-  font-family: 'Lobster', cursive;
+  font-family: "Lobster", cursive;
   padding: 10px;
   color: #fff;
   text-transform: uppercase;
 }
 
 .search-container {
-  margin: 20px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .search-container input[type="text"] {
   padding: 10px;
-  width: 50%;
+  width: 100%;
+  max-width: 300px;
   font-size: 20px;
   text-align: center;
+  border: none;
+  border-radius: 5px;
 }
 
 .search-container select {
   padding: 10px;
   font-size: 18px;
   text-align: center;
+  width: 100%;
+  max-width: 300px;
 }
 
 .result {
@@ -73,13 +80,12 @@ header {
 .movie h3 {
   margin-top: 10px;
   font-size: 16px;
-  color:azure;
+  color: azure;
 }
 
 .movie p {
   margin-top: 5px;
   font-size: 14px;
-  
 }
 
 .grid-container {
